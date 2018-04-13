@@ -8,10 +8,6 @@ app.controller("wikiPage",function($scope,$http,$timeout){
 			$http.get(jsonLink).then(function(data){
 				console.log(data);
 				var myQueries = data.data.query.pages;
-				/*for(id in myQueries){
-					$scope.id = id;
-					console.log(id);
-				}*/
 				$scope.myQueries = myQueries;
 			});
 		}else{
